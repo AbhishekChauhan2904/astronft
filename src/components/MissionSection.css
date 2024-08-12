@@ -1,0 +1,30 @@
+.mission-section {
+    padding: 3rem;
+    background-color: #ffffff;
+    opacity: 0;  /* Initially hidden */
+    transform: translateY(100%);  /* Slide-in from below */
+    transition: transform 1s ease-out, opacity 1s ease-out;  /* Smooth animation */
+  }
+  
+  .mission-section.slide-in {
+    opacity: 1;  /* Fully visible */
+    transform: translateY(0);  /* Slide to original position */
+  }
+  
+  .mission-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mission-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .mission-video video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(250, 249, 249, 0.1);
+  }
+  

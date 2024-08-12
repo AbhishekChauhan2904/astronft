@@ -1,0 +1,92 @@
+/* DiagonalLines.css */
+.diagonal-lines-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 500;
+    overflow: hidden;
+  }
+  
+  .line {
+    position: absolute;
+    width: 2px; /* Width of the lines */
+    background-color: black;
+    opacity: 0.7; /* Initial opacity */
+    transform: rotate(120deg); /* Rotate the lines to make them diagonal */
+    animation: line-move 2s ease forwards, line-fade 0s ease 2s forwards; /* Move and fade animation */
+  }
+  
+  /* Animation for moving lines diagonally */
+  @keyframes line-move {
+    0% {
+      transform: translate(-100vw, -100vh) rotate(120deg); /* Start from top-left outside the screen */
+    }
+    100% {
+      transform: translate(0, 0) rotate(120deg); /* Move to the designated position */
+    }
+  }
+  
+  /* Animation for fading out lines */
+  @keyframes line-fade {
+    0% {
+      opacity: 0.7; /* Start with visible lines */
+    }
+    100% {
+      opacity: 0; /* Fade out to invisible */
+    }
+  }
+  
+  /* Positioning and Height of each line */
+  .line:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    height: 120px;
+  }
+  
+  .line:nth-child(2) {
+    top: 40%;
+    left: 70%;
+    height: 140px;
+  }
+  
+  .line:nth-child(3) {
+    top: 20%;
+    right: 20%;
+    bottom: 70%;
+    left: 10%;
+    height: 100px;
+  }
+  
+  .line:nth-child(4) {
+    top: 40%;
+    left: 20%;
+    height: 250px;
+  }
+  
+  .line:nth-child(5) {
+    top: 50%;
+    left: 40%;
+    height: 120px;
+  }
+  
+  .line:nth-child(6) {
+    top: 5%;
+    left: 80%;
+    height: 180px;
+  }
+  
+  .line:nth-child(7) {
+    top: 40%;
+    left: 30%;
+    height: 200px;
+  }
+  
+  .line:nth-child(8) {
+    top: 30%;
+    left: 80%;
+    height: 220px;
+  }
+  
